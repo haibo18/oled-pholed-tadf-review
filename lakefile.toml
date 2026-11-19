@@ -1,0 +1,6 @@
+name = "OledEfficiency"
+version = "0.1.0"
+defaultTargets = ["OledEfficiency"]
+
+[[lean_lib]]
+name = "OledEfficiency"
