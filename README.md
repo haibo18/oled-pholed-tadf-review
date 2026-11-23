@@ -2,25 +2,29 @@
 
 超高效率有机发光二极管（PHOLED 与 TADF）综述论文 + Lean 4 形式化核验骨架。
 
+**English version: [README.en.md](./README.en.md)**
+
 本仓库沉淀「磷光 OLED 与热活化延迟荧光：三态激子回收与超高效率 OLED」课题的
-研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护。
+研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护，
+并提供中英双语论文与文档。
 
 ## 目录结构
 
 ```
 oled-pholed-tadf-review/
 ├── paper/
-│   └── OLED_PHOLED_TADF_review.md   # 完整综述论文
+│   ├── OLED_PHOLED_TADF_review.md    # 中文综述
+│   └── OLED_PHOLED_TADF_review_en.md # English review
 ├── OledEfficiency.lean              # Lean 库根模块
 ├── OledEfficiency/
 │   ├── Basic.lean
-│   └── Proofs.lean                  # 激子统计 / 效率上限 / 时间线 / EQE 记录形式化
+│   └── Proofs.lean                  # 激子统计 / 效率上限 / 时间线 / EQE 记录
 ├── lakefile.toml
 ├── lean-toolchain
 ├── lake-manifest.json
 ├── .github/workflows/               # Lean CI
 ├── CHANGELOG.md
-└── README.md
+└── README.md / README.en.md
 ```
 
 ## 论文要点
@@ -51,6 +55,13 @@ lake build
 
 > 光物理与材料结论以同行评审文献为准；本工程不把机理解释当作可由算术
 > 证明的命题。工程内 `sorry` / `admit` / `axiom` 数量为 0。
+
+## 双语版本管理
+
+- 论文：`paper/OLED_PHOLED_TADF_review.md`（中文）与 `paper/OLED_PHOLED_TADF_review_en.md`（英文）内容对齐；
+- 文档：`README.md`（中文）与 `README.en.md`（英文）互相链接；
+- 变更日志：`CHANGELOG.md` 同时保留中英两段说明；
+- 论文修订时应同步更新两个语言版本，提交信息在 subject 中注明 `docs(zh)` / `docs(en)`。
 
 ## 版本维护
 
